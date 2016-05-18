@@ -65,15 +65,15 @@
             <h2 class="red">Modelling, Linking, Visualising</h2>
 
             <h5 class="byline">
-                <strong>Max Grüntgens, Torsten Schrade | Presentation:
-                    <a href="#" title="Download the presentation">
-                        GitHub
-                    </a>
-                </strong><br/>
+                <strong>Max Grüntgens, Torsten Schrade | </strong>
                 <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Twitter_bird_logo_2012.svg" alt="Twitter" width="30" />
-                <a href="https://twitter.com/digicademy" title="Digital Academy on Twitter">@digicademy</a> |
+                <a href="https://twitter.com/digicademy" title="Digital Academy on Twitter">@digicademy</a> /
                 <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Twitter" width="30" />
-                <a href="https://github.com/digicademy/" title="Digital Academy on GitHub">digicademy</a>
+                <a href="https://github.com/digicademy/" title="Digital Academy on GitHub">digicademy</a><br/>
+                Download:
+                <a href="https://github.com/digicademy/whise2016-xtriples" title="Download the presentation">
+                    https://github.com/digicademy/whise2016-xtriples
+                </a>
             </h5>
         </div>
 
@@ -81,13 +81,19 @@
             <h2>Table of Contents</h2>
             <ol>
                 <li>
-                    One
+                   Humanities data repositories: Examples from the <br/>Academy of Sciences and Literature Mainz
                 </li>
                 <li>
-                    Two
+                    Implicit and explicit semantics: modelling TEI-XML to RDF
                 </li>
                 <li>
-                    Three
+                    The XTriples Webservice
+                </li>
+                <li>
+                    XTriples: Harvesting, transforming and vizualising XML data
+                </li>
+                <li>
+                   XTriples: Outlook &amp; Roadmap
                 </li>
             </ol>
         </div>
@@ -95,20 +101,157 @@
         <div class="step">
             <h1 class="red">01</h1>
             <h2 class="line-height-one-five">
-                Chapter
+                Humanities data repositories
+            </h2>
+            <h3 class="red">
+                Examples from the Academy of Sciences and Literature Mainz
+            </h3>
+        </div>
+
+        <div class="step">
+            <h2>The German Academies of Sciences</h2>
+            <div class="row">
+                <div class="six columns">
+                    <h3>SVG</h3>
+                </div>
+                <div class="six columns">
+                    <h3>Bullet list about the research programme</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Exemplary Projects and APIs</h2>
+            <div class="row">
+                <div class="four columns">
+                    <h3>Screenshot DIO</h3>
+                </div>
+                <div class="eight columns">
+                    <h3>Bullet list</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="four columns">
+                    <h3>Screenshot CVMA</h3>
+                </div>
+                <div class="eight columns">
+                    <h3>Bullet list</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="four columns">
+                    <h3>Screenshot Salamanca</h3>
+                </div>
+                <div class="eight columns">
+                    <h3>Bullet list</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="four columns">
+                    <h3>Screenshot Goethe</h3>
+                </div>
+                <div class="eight columns">
+                    <h3>Bullet list</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>
+                Humanities data repositories in the Academy and on the Web
+            </h2>
+            <p>SVG: DIO, CVMA, RI + VIAF, GND, Geonames, Iconclass etc.</p>
+        </div>
+
+        <div class="step">
+            <h1 class="red">02</h1>
+            <h2 class="line-height-one-five">
+                Implicit and explicit semantics
+            </h2>
+            <h3 class="red">
+                From TEI-XML to RDF
+            </h3>
+        </div>
+
+        <div class="step">
+            <h2>Implicit Semantics in TEI-XML</h2>
+
+<pre>
+<code class="xml">    &lt;<span class="object-background">correspDesc</span> key="686" <span class="subject-background">cs:source="#SOE20"</span>&gt;
+        &lt;correspAction <span class="predicate-background">type="sent"</span>&gt;
+            &lt;<span class="object-background">persName</span> <span class="subject-background">ref="http://d-nb.info/gnd/118540238"</span>&gt;
+                Johann Wolfgang von Goethe
+            &lt;/persName&gt;
+            &lt;<span class="object-background">placeName</span> <span class="subject-background">ref="http://www.geonames.org/2812482"</span>&gt;
+                Weimar
+            &lt;/placeName&gt;
+            &lt;<span class="predicate-background">date</span> <span class="object-background">when="1793-12-05"</span>&gt;5.12.1793&lt;/date&gt;
+        &lt;/correspAction&gt;
+        [...]
+    &lt;/correspDesc&gt;
+</code>
+</pre>
+            <ul class="legend">
+                <li class="subject">Subject</li>
+                <li class="predicate">Predicate</li>
+                <li class="object">Object</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Explicit Semantics in RDF</h2>
+
+<pre>
+<code class="xml">    <span class="subject-color">Goethe</span>           <span class="predicate-color">is a</span>              <span class="object-color">Person</span> ;
+                     <span class="predicate-color">sends</span>             <span class="object-color">Letter</span> .
+
+    <span class="subject-color">Letter</span>           <span class="predicate-color">dates to</span>          <span class="object-color">1793</span> ;
+                     <span class="predicate-color">sent from</span>         <span class="object-color">Weimar</span> .
+
+    <span class="subject-color">Weimar</span>           <span class="predicate-color">is a</span>              <span class="object-color">City</span> ;
+                     <span class="predicate-color">has latitude</span>      <span class="object-color">11.32</span> ;
+                     <span class="predicate-color">has longitude</span>     <span class="object-color">50.98</span> .
+</code>
+</pre>
+
+            <ul class="legend">
+                <li class="subject">Subject</li>
+                <li class="predicate">Predicate</li>
+                <li class="object">Object</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>LOD approaches for data repositories from the Humanities</h2>
+            <h3 class="red">Example: Modelling metadata for a critical edition of letters</h3>
+            <p>Greuler Goethe Model</p>
+        </div>
+
+        <div class="step">
+            <h1 class="red">03</h1>
+            <h2 class="line-height-one-five">
+                The XTriples Webservice
             </h2>
         </div>
 
         <div class="step">
-            <h2>Title</h2>
-            <div class="row">
-                <div class="six columns">
-                    <h3>Left six columns</h3>
-                </div>
-                <div class="six columns">
-                    <h3>Right six columns</h3>
-                </div>
-            </div>
+            <h1 class="red">04</h1>
+            <h2 class="line-height-one-five">
+                XTriples
+            </h2>
+            <h3 class="red">
+                Harvesting, transforming and vizualising XML data
+            </h3>
+        </div>
+
+        <div class="step">
+            <h1 class="red">05</h1>
+            <h2 class="line-height-one-five">
+                XTriples
+            </h2>
+            <h3 class="red">
+                Outlook &amp; Roadmap
+            </h3>
         </div>
 
         <div class="step">
@@ -179,6 +322,7 @@
 
     <!-- highlight -->
     <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
     <!-- jquery -->
     <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
