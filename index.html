@@ -81,19 +81,19 @@
             <h2>Table of Contents</h2>
             <ol>
                 <li>
-                   Humanities data repositories: Examples from the <br/>Academy of Sciences and Literature Mainz
+                   Humanities' data repositories: Examples from the <br/>Academy of Sciences and Literature Mainz
                 </li>
                 <li>
-                    Implicit and explicit semantics: modelling TEI-XML to RDF
+                    Implicit and explicit semantics: bridging the gap between TEI-XML and RDF
                 </li>
                 <li>
                     The XTriples Webservice
                 </li>
                 <li>
-                    XTriples: Harvesting, transforming and vizualising XML data
+                    Harvesting, transforming and vizualising XML data
                 </li>
                 <li>
-                   XTriples: Outlook &amp; Roadmap
+                   Outlook &amp; Roadmap
                 </li>
             </ol>
         </div>
@@ -101,10 +101,10 @@
         <div class="step">
             <h1 class="red">01</h1>
             <h2 class="line-height-one-five">
-                Humanities data repositories
+                Humanities' data repositories
             </h2>
             <h3 class="red">
-                Examples from the Academy of Sciences and Literature Mainz
+                Examples from the Academy of Sciences and Literature Mainz
             </h3>
         </div>
 
@@ -231,9 +231,28 @@
 
         <div class="step">
             <h2>
-                Humanities data repositories in the Academy and on the Web
+               Linked Open Data for the Academies' research projects
             </h2>
-            <p>SVG: DIO, CVMA, RI + VIAF, GND, Geonames, Iconclass etc.</p>
+            <h3 class="red pull-up">Great potential by connecting repositories (e.g. via normdata)</h3>
+            <div class="mfp-lightbox center">
+                <a href="resources/img/linking-repositories.png">
+                    <img src="resources/img/linking-repositories.png" width="80%" />
+                </a>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>
+               New connections, new questions
+            </h2>
+            <h3 class="red">Some example questions that could possibly answered using semantic web technologies</h3>
+            <ul>
+                <li class="substep">Which historical persons occur across all the repositories in which particular contexts?</li>
+                <li class="substep">Which iconographically similar resources exist in the data sets and during what particular time frame?</li>
+                <li class="substep">Are there geographical patterns in the occurrence of certain religous symbols (e.g. on gravestones etc.) that can be drawn from the data?</li>
+                <li class="substep">Can historical phenomena like floods, famine etc. be pinpointed by cross-analysing the data sets?</li>
+            </ul>
+            <h5 class="substep"><strong>But the first question is: How do we get the semantic information out of the TEI-XML?</strong></h5>
         </div>
 
         <div class="step">
@@ -242,13 +261,59 @@
                 Implicit and explicit semantics
             </h2>
             <h3 class="red">
-                From TEI-XML to RDF
+                Bridging the gap between TEI-XML and RDF
             </h3>
         </div>
 
         <div class="step">
-            <h2>Implicit Semantics in TEI-XML</h2>
+            <h2>
+                Example: Model for a critical edition of letters
+            </h2>
+            <h3 class="red">Using the metadata from the correspSearch webservice<sup>1</sup></h3>
+            <div class="row">
+                <div class="six columns mfp-lightbox">
+                    <a href="resources/img/screenshots_correspsearch_01.png">
+                        <img src="resources/img/screenshots_correspsearch_01.png" width="100%" />
+                    </a>
+                </div>
+                <div class="six columns mfp-lightbox">
+                    <a href="resources/img/screenshots_correspsearch_02.png">
+                        <img src="resources/img/screenshots_correspsearch_02.png" width="100%" />
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="six columns centered">
+                    <p>
+                        <a href="http://correspsearch.bbaw.de/index.xql?id=&l=en">
+                            Aggregator and search interface for scholarly letter editions...
+                        </a>
+                    </p>
+                </div>
+                <div class="six columns centered">
+                    <p>
+                        <a href="http://correspsearch.bbaw.de/index.xql?id=api&l=en">
+                            ... with a very nice TEI-XML API
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <p style="position: relative; top: 25px; font-size: 14px; line-height: 1.2;"><sup>1</sup> The web service correspSearch has been developed and operated since April
+                    2014 by <a href="http://www.bbaw.de/telota" class="extern">TELOTA</a>,
+                    a research group of the <a href="http://www.bbaw.de" class="extern">Berlin Brandenburg Academy of
+                    Sciences and Humanities (BBAW)</a>, and in cooperation with the
+                    <a href="http://www.tei-c.org/Activities/SIG/Correspondence/" class="extern">TEI
+                    Correspondence SIG</a> and other participating researchers.
+                </p>
+            </div>
+        </div>
 
+
+        <div class="step">
+            <h2 style="margin-top: 30px;">Implicit Semantics in TEI-XML</h2>
+            <h3 class="pull-up red">Data of a letter from the correspSearch API</h3>
+            <p style="margin: -10px 0; padding: 0; line-height: 1"><a href="#">Link</a></p>
 <pre>
 <code class="xml">    &lt;<span class="object-background">correspDesc</span> key="686" <span class="subject-background">cs:source="#SOE20"</span>&gt;
         &lt;correspAction <span class="predicate-background">type="sent"</span>&gt;
@@ -264,15 +329,20 @@
     &lt;/correspDesc&gt;
 </code>
 </pre>
-            <ul class="legend">
+            <ul class="legend" style="position: relative; top: -50px;">
                 <li class="subject">Subject</li>
                 <li class="predicate">Predicate</li>
                 <li class="object">Object</li>
             </ul>
+            <h5 style="position: relative; top: -50px;">
+                The semantics are "implicit" in the sense that they can be contained in XML tag names, tag values,
+                attribute names as well as values.
+            </h5>
         </div>
 
         <div class="step">
             <h2>Explicit Semantics in RDF</h2>
+            <h3 class="red">The same information as expressed in RDF</h3>
 
 <pre>
 <code class="xml">    <span class="subject-color">Goethe</span>           <span class="predicate-color">is a</span>              <span class="object-color">Person</span> ;
@@ -287,7 +357,7 @@
 </code>
 </pre>
 
-            <ul class="legend">
+            <ul class="legend" style="position: relative; top: -50px;">
                 <li class="subject">Subject</li>
                 <li class="predicate">Predicate</li>
                 <li class="object">Object</li>
@@ -295,8 +365,8 @@
         </div>
 
         <div class="step">
-            <h2>LOD approaches for data repositories from the Humanities</h2>
-            <h3 class="red">Example: Modelling metadata for a critical edition of letters</h3>
+            <h2>Linking and enriching data across repositories</h2>
+            <h3 class="red">Example: Model for a critical edition of letters</h3>
             <p>Greuler Goethe Model</p>
         </div>
 
@@ -305,6 +375,9 @@
             <h2 class="line-height-one-five">
                 The XTriples Webservice
             </h2>
+            <h3 class="red">
+                A generic webservice to extract RDF statements from XML
+            </h3>
         </div>
 
         <div class="step">
