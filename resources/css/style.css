@@ -144,8 +144,7 @@ body {
 .present iframe:hover,
 .present .ct-container,
 .present .ct-container:hover,
-.present .swiper-container,
-.present .swiper-container:hover,
+.present .hljs,
 button.mfp-close {
 	pointer-events: auto;
 }
@@ -396,6 +395,10 @@ CLASSES FOR SPECIAL LAYOUT/TYPOGRAPHY
 	margin: 0;
 }
 
+.highlight {
+	background: #F6E900;
+}
+
 /*
 #########################################################
 STYLES FOR INCLUDED LIBRARIES
@@ -442,6 +445,10 @@ text {
 .steps li {
 	display: inline-block;
 	margin-right: 1em;
+}
+
+.steps li:before {
+	content: "";
 }
 
 .steps a {
@@ -524,6 +531,10 @@ text {
 
 .highlight-background {
 	background: #ffff00;
+}
+
+.hljs-tag:hover {
+	background: #F6E900;
 }
 
 /*
