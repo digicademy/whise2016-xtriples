@@ -1,0 +1,73 @@
+<?xml-model uri="http://xtriples.spatialhumanities.de/xtriples.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<xtriples>
+	<configuration>
+		<vocabularies>
+			<vocabulary prefix="cvma" uri="http://id.corpusvitrearum.de/images/"/>
+			<vocabulary prefix="iconclass" uri="http://iconclass.org/"/>
+			<vocabulary prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+			<vocabulary prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+			<vocabulary prefix="dcterms" uri="http://purl.org/dc/terms/"/>
+			<vocabulary prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+			<vocabulary prefix="owltime" uri="http://www.w3.org/2006/time#"/>
+			<vocabulary prefix="crm" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
+			<vocabulary prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
+		</vocabularies>
+		<triples>
+
+			<!-- a physical thing, a concept -->
+			<statement>
+				<subject>//column[@name='link']</subject>
+				<predicate prefix="rdf">type</predicate>
+				<object prefix="crm" type="uri">E18_Physical_Thing</object>
+			</statement>
+			<statement>
+				<subject>//column[@name='link']</subject>
+				<predicate prefix="rdf">type</predicate>
+				<object prefix="skos" type="uri">Concept</object>
+			</statement>
+
+			<!-- dc title and description -->
+			<statement>
+				<subject>//column[@name='link']</subject>
+				<predicate prefix="dcterms">title</predicate>
+				<object type="literal" lang="de">//column[@name='dc_title']</object>
+			</statement>
+			<statement>
+				<subject>//column[@name='link']</subject>
+				<predicate prefix="dcterms">description</predicate>
+				<object type="literal" lang="de">//column[@name='cvma_iconclass_description']</object>
+			</statement>
+
+			<!-- link to iconclass concept -->
+			<statement>
+				<subject>//column[@name='link']</subject>
+				<predicate prefix="rdfs">seeAlso</predicate>
+				<object prefix="iconclass" type="uri">//column[@name='cvma_iconclass_notation']</object>
+			</statement>
+
+			<!-- link to europeana iconclass search -->
+			<statement>
+				<subject>//column[@name='link']</subject>
+				<predicate prefix="rdfs">seeAlso</predicate>
+				<object type="uri">/concat('http://www.europeana.eu/portal/search?q=what%3A%22http%3A%2F%2Ficonclass.org%2F', .//column[@name='cvma_iconclass_notation'], '%22')</object>
+			</statement>
+
+		</triples>
+	</configuration>
+	<collection>
+		<resource>
+			<image>
+				<column name="dc_identifier">2622</column>
+				<column name="dc_title">Hl. Michael als Drachentöter</column>
+				<column name="cvma_age_determination_start">1210-01-01</column>
+				<column name="cvma_iconclass_notation">11G31</column>
+				<column name="cvma_iconclass_description">der Erzengel Michael kämpft gegen den Drachen (Teufel, Satan)  Drache · Engel · Erzengel · Michael · Religion · Satan · Teufel · christliche Religion · kämpfen · mit Füßen treten · trampeln · übernatürlich</column>
+				<column name="geo">49.49710000000000,11.38981111111100</column>
+				<column name="iptc4xmpext_province_state">Bayern</column>
+				<column name="iptc4xmpext_city">Henfenfeld</column>
+				<column name="iptc4xmpext_sublocation">Pfarrkirche</column>
+				<column name="link">http://id.corpusvitrearum.de/images/2622</column>
+			</image>
+		</resource>
+	</collection>
+</xtriples>
