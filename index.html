@@ -66,7 +66,7 @@
     <div id="impress">
 
         <div class="step">
-            <h4>29.05.2016 | 1. WHiSe Workshop / ESWC 2016, Anissaras - Crete</h4>
+            <h4>29.05.2016 | <a href="http://whise.kmi.open.ac.uk/">1. WHiSe Workshop / ESWC 2016, Anissaras - Crete</a></h4>
 
             <h1>Data Repositories in the Humanities and the Semantic Web</h1>
 
@@ -99,16 +99,16 @@
                    Humanities' data repositories: Examples from the <br/>Academy of Sciences and Literature Mainz
                 </li>
                 <li>
-                    Implicit and explicit semantics: bridging the gap between TEI-XML and RDF
+                    Implicit and explicit semantics:<br/> bridging the gap between TEI-XML and RDF
                 </li>
                 <li>
                     The XTriples Webservice
                 </li>
                 <li>
-                    Harvesting, transforming and vizualising XML data
+                    Use cases: Harvesting, transforming and vizualising XML data
                 </li>
                 <li>
-                   Outlook &amp; Roadmap
+                   XTriples: Outlook &amp; Roadmap
                 </li>
             </ol>
         </div>
@@ -264,10 +264,10 @@
             <ul>
                 <li class="substep">Which historical persons occur across all the repositories in which particular contexts?</li>
                 <li class="substep">Which iconographically similar resources exist in the data sets and during what particular time frame?</li>
-                <li class="substep">Are there geographical patterns in the occurrence of certain religous symbols (e.g. on gravestones etc.) that can be drawn from the data?</li>
+                <li class="substep">Are there geographical patterns in the occurrence of certain religous symbols (e.g. on gravestones etc.) that can be inferenced from the data?</li>
                 <li class="substep">Can historical phenomena like floods, famine etc. be pinpointed by cross-analysing the data sets?</li>
             </ul>
-            <h5 class="substep"><strong>But the first question is: How do we get the semantic information out of the TEI-XML?</strong></h5>
+            <h5 class="substep"><strong>But the primary question is: How to get the semantic information out of TEI-XML?</strong></h5>
         </div>
 
         <div class="step">
@@ -280,6 +280,7 @@
             </h3>
         </div>
 
+        <!--
         <div class="step">
             <h2>
                 Example: XML-based semantics in a scholarly edition of letters
@@ -323,12 +324,12 @@
                 </p>
             </div>
         </div>
-
+        -->
 
         <div class="step">
             <h2 style="margin-top: 30px;">Implicit Semantics in TEI-XML</h2>
             <h3 class="pull-up red">Metadata of a letter from Johann Wolfgang von Goethe</h3>
-            <p style="margin: -10px 0; padding: 0; line-height: 1">Link to letter:
+            <p style="margin: -10px 0; padding: 0; line-height: 1">Link:
                 <a href="http://correspsearch.bbaw.de/api/v1/tei-xml.xql?correspondent=http://d-nb.info/gnd/118540238&amp;startdate=1793-12-05&amp;enddate=1793-12-05">
                     Johann Wolfgang von Goethe to Samuel Thomas Soemmering (1793)
                 </a>
@@ -384,17 +385,17 @@
         </div>
 
         <div class="step">
-            <h2>Data enrichment across repositories</h2>
-            <h3 class="red">RDF modeling the letter from Johann Wolfgang von Goethe</h3>
+            <h2>Gathering additional data</h2>
+            <h3 class="red">Enriching the RDF model of Goethe's letter with LOD</h3>
 
             <ol class="steps">
-                <li><a href="#/step-12" id="step1">1</a></li>
-                <li><a href="#/step-12" id="step2">2</a></li>
-                <li><a href="#/step-12" id="step3">3</a></li>
-                <li><a href="#/step-12" id="step4">4</a></li>
-                <li><a href="#/step-12" id="step5">5</a></li>
-                <li><a href="#/step-12" id="step6">6</a></li>
-                <li><a href="#/step-12" id="step7">7</a></li>
+                <li><a href="#/step-11" id="step1">1</a></li>
+                <li><a href="#/step-11" id="step2">2</a></li>
+                <li><a href="#/step-11" id="step3">3</a></li>
+                <li><a href="#/step-11" id="step4">4</a></li>
+                <li><a href="#/step-11" id="step5">5</a></li>
+                <li><a href="#/step-11" id="step6">6</a></li>
+                <li><a href="#/step-11" id="step7">7</a></li>
             </ol>
 
             <ul class="legend">
@@ -404,6 +405,10 @@
             </ul>
 
             <div id="correspsearch-model"></div>
+        </div>
+
+        <div class="step">
+            <h1 class="red centered">How?</h1>
         </div>
 
         <div class="step">
@@ -423,7 +428,7 @@
                 <div class="row" style="position: relative; top: -20px;">
                     <div class="twelve columns">
                         <a href="http://xtriples.spatialhumanities.de" title="Go to XTriples Website">
-                            <img src="resources/img/screenshots_xtriples_01.png" alt="Screenshot" title="Website of the service" style="width: 70%;" />
+                            <img src="resources/img/screenshots_xtriples_01.png" alt="Screenshot" title="Website of the service" style="width: 65%;" />
                         </a>
                     </div>
                 </div>
@@ -451,18 +456,19 @@
         </div>
 
         <div class="step">
-            <h2>Workflow &amp; components</h2>
+            <h2>XTriples</h2>
+            <h3 class="red">Process diagramm &amp; technical components</h3>
             <div class="row">
                 <div class="twelfe columns mfp-lightbox">
                     <a href="resources/img/structure.png">
-                        <img src="resources/img/structure.png" alt="Diagram of the webservice structure" title="Diagram of the webservice structure" style="width: 80%;" />
+                        <img src="resources/img/structure.png" alt="Diagram of the webservice structure" title="Diagram of the webservice structure" style="width: 75%;" />
                     </a>
                </div>
             </div>
         </div>
 
         <div class="step">
-            <h2>Simple configuration</h2>
+            <h2>Simple XML configuration</h2>
             <h3 class="red pull-up">Based on statement patterns with XPATH / XQuery expressions</h3>
 <pre>
 <code class="xml small linenumbers" style="line-height: 1.5">&lt;xtriples&gt;
@@ -491,8 +497,8 @@
         </div>
 
         <div class="step">
-            <h2 style="margin-top: 100px;">Example</h2>
-            <h3 class="red pull-up">Crawling resources and extracting FOAF statements</h3>
+            <h2 style="margin-top: 100px;">Example data and configuration</h2>
+            <h3 class="red pull-up">Crawling a collection and extracting FOAF statements</h3>
             <div class="row" style="position: relative; top: -30px;">
                 <div class="four columns">
 <pre>
@@ -573,8 +579,8 @@
                     <h5 class="red">
                         XTriples configuration
                     </h5>
-                    <p style="position: absolute; right: 0; top: -12px;">
-                        Run this live:
+                    <p style="position: absolute; right: 0; top: 3px;">
+                        <strong>Run this live:</strong>
                         <a href="http://xtriples.spatialhumanities.de/examples/gods/all.xml">XML</a> |
                         <a href="http://xtriples.spatialhumanities.de/examples/gods/configuration.xml">Configuration</a> |
                         <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://xtriples.spatialhumanities.de/examples/gods/configuration.xml">RDF</a> |
@@ -587,7 +593,7 @@
         <div class="step">
             <h1 class="red">04</h1>
             <h2 class="line-height-one-five">
-                XTriples
+                Use cases
             </h2>
             <h3 class="red">
                 Harvesting, transforming and vizualising XML data
@@ -596,7 +602,7 @@
 
         <div class="step">
             <h2>
-                Use case: Corpus Vitrearum
+                Use case 1: Corpus Vitrearum
             </h2>
             <h3 class="red">
                 Connecting the CVMA image archive with Iconclass and Europeana
@@ -610,7 +616,7 @@
 
         <div class="step">
             <h2>CVMA - Stage 01</h2>
-            <h3 class="red">CIDOC, SKOS and dcterms</h3>
+            <h3 class="red">Applying CIDOC, SKOS and dcterms</h3>
             <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="596pt" height="163pt" viewBox="0.00 0.00 596.00 163.00">
                 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 159)">
                     <title>d1e17</title>
@@ -656,7 +662,7 @@
             </svg>
             <p class="small">
                 <strong>XTriples:</strong> <a href="data/xtriples/cvma_iconclass_01.xml">Configuration</a> |
-                <strong>Run it live:</strong>
+                <strong>Run this live:</strong>
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_01.xml&format=svg">SVG</a> |
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_01.xml&format=rdf">RDF/XML</a> |
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_01.xml&format=turtle">Turtle</a>
@@ -726,7 +732,7 @@
             </svg>
             <p class="small">
                 <strong>XTriples:</strong> <a href="data/xtriples/cvma_iconclass_02.xml">Configuration</a> |
-                <strong>Run it live:</strong>
+                <strong>Run this live:</strong>
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_02.xml&format=svg">SVG</a> |
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_02.xml&format=rdf">RDF/XML</a> |
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_02.xml&format=turtle">Turtle</a>
@@ -811,7 +817,7 @@
             </svg>
             <p class="small">
                 <strong>XTriples:</strong> <a href="data/xtriples/cvma_iconclass_03.xml">Configuration</a> |
-                <strong>Run it live:</strong>
+                <strong>Run this live:</strong>
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_03.xml&format=svg">SVG</a> |
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_03.xml&format=rdf">RDF/XML</a> |
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_03.xml&format=turtle">Turtle</a>
@@ -954,11 +960,25 @@
             </svg>
             <p class="small">
                 <strong>XTriples:</strong> <a href="data/xtriples/cvma_iconclass_04.xml">Configuration</a> |
-                <strong>Run it live:</strong>
+                <strong>Run this live:</strong>
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_04.xml&format=svg">SVG</a> |
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_04.xml&format=rdf">RDF/XML</a> |
                 <a href="http://xtriples.spatialhumanities.de/extract.xql?configuration=http://digicademy.github.io/whise2016-xtriples/data/xtriples/cvma_iconclass_04.xml&format=turtle">Turtle</a>
             </p>
+        </div>
+
+        <div class="step">
+            <h2>
+                Use case 2: A network of letters
+            </h2>
+            <h3 class="red">
+                Combining correspSearch with the GND and Geonames
+            </h3>
+            <div class="row">
+                <div class="ten columns" style="position: relative; left: 6%;">
+                    <img src="resources/img/linking-correspSearch.png" alt="Connecting letter information with the GND Authority File and Geonames" style="width: 100%" />
+                </div>
+            </div>
         </div>
 
         <div class="step">
@@ -973,7 +993,7 @@
 
         <div class="step">
             <div class="centered">
-                <h1>F I N I S</h1>
+                <h1 class="red">F I N I S</h1>
                 <h2>Thank you</h2>
             </div>
         </div>
