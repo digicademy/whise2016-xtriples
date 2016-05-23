@@ -135,7 +135,7 @@ body {
 /* ENABLE POINTER EVENTS ON SPECIAL ELEMENTS */
 
 .present a,
-.prsent a:hover,
+.present a:hover,
 .present svg,
 .present svg:hover,
 .present object,
@@ -208,6 +208,18 @@ a {
 	-o-transition: 0.5s;
 	transition: 0.5s;
 	font-weight: bold;
+}
+
+a:link, a:hover, a:focus, a:visited {
+	color: #1e88e5;
+}
+
+a:hover {
+	border-bottom: 2px solid #1e88e5;
+}
+
+.mfp-lightbox a:hover {
+	border: none;
 }
 
 p {
