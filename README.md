@@ -1,15 +1,14 @@
-### Date | Place
+### 29.05.2016 | 1. WHiSe Workshop / ESWC 2016, Anissaras - Crete
 
-# Title
+# Data Repositories in the Humanities and the Semantic Web
 
-## Subtitle
+## Modelling, Linking, Visualising
 
-### Author
+### Max Grüntgens, Torsten Schrade
 
-Description
+Presentation of the XTriples webservice at the <a href="http://whise.kmi.open.ac.uk/">1. WHiSe workshop</a> on
+Humanities in the Semantic Web.
 
-The code of this boilerplate is at https://github.com/digicademy/impress-js-boilerplate
+You can find this presentation online at http://digicademy.github.io/whise2016-xtriples
 
-A live demo can be found at http://digicademy.github.io/impress-js-boilerplate/
-
-Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), @digicademy
+Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), Max Grüntgens and Torsten Schrade
